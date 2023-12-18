@@ -19,8 +19,7 @@ jobs:
       - name: aws-ssm-to-env
         uses: eliasjcjunior/aws-ssm-parameters-action@main
         with:
-          paths: |
-          /env/EXPORO_SERVICE_AUTH
+          paths: '/env/EXPORO_SERVICE_AUTH'
       - name: log envs
         env:
           SECRET_1: ${{ env.SECRET_1 }}
