@@ -21,3 +21,10 @@ jobs:
         with:
           paths: |
           /env/EXPORO_SERVICE_AUTH
+      - name: log envs
+        env:
+          SECRET_1: ${{ env.SECRET_1 }}
+          SECRET_2: ${{ env.SECRET_2 }}
+        run: |
+          echo $SECRET_1
+          echo $SECRET_2
