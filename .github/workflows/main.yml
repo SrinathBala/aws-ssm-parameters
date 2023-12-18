@@ -1,0 +1,23 @@
+name: Parse SSM parameter
+
+on:
+  push
+
+jobs:
+  get-ssm-env:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-1
+          aws-access-key-id:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+  get-ssm-parameter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: aws-ssm-to-env
+        uses: eliasjcjunior/aws-ssm-parameters-action@main
+        with:
+          paths: |
+          /env/EXPORO_SERVICE_AUTH
