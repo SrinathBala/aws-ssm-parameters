@@ -16,4 +16,4 @@ jobs:
       - name: aws-ssm-to-env
         uses: eliasjcjunior/aws-ssm-parameters-action@main
         with:
-          paths: '/env/EXPORO_SERVICE_AUTH'
+          paths: '/env/EXPORO_SERVICE_AUTH
