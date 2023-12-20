@@ -18,4 +18,9 @@ jobs:
         with:
           paths: |
            /env/EXPORO_SERVICE_AUTH
+      - name: log envs
+        env:
+          secret_name: ${{ env.secret_name }}
+        run: |
+          echo $secret_name
            
