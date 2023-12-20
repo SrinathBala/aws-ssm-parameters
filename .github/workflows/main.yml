@@ -17,3 +17,4 @@ jobs:
         uses: eliasjcjunior/aws-ssm-parameters-action@main
         with:
           paths: '/env/EXPORO_SERVICE_AUTH
+
